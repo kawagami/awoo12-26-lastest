@@ -1,0 +1,430 @@
+html, body {
+    /* 設定body高度為100% 拉到視窗可視的大小 */
+    height: 100%;
+	margin: 0px auto;
+	padding:0px;
+	font-family: Microsoft JhengHei;
+}
+ol, ul{
+	margin:0px;padding:0px;
+}
+
+.id_wrapper {
+    /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+    min-height: 100%;
+    /* 位置設為relative, 作為footer區塊位置的參考 */
+    position: relative;
+	background-color:#fff;
+}
+.header{
+	height: 60px;
+    background-color:#5176b9;
+    position:fixed;
+    width:100%;
+    z-index:3;
+	box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    background-color:#fff;
+}
+
+.header ul a{
+    display:block;
+    padding:20px;
+    border-right:1px solid #aaa;
+    text-decoration:none;
+	color:#ababab; /*超連結字顏色*/
+}
+
+.header ul a:hover{
+    color: #F8DC3D;
+   transition: 0.25s;
+}
+
+.header .logo{
+    float:left;
+    display:block;
+    font-size:2em;
+    padding:10px 20px;
+}
+
+.header .menu{
+    clear:both;
+    max-height:0;
+    transition:max-height .2s ease-out;
+}
+
+.header .menu-icon{
+    padding: 28px 20px;
+    position:relative;
+    float:right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+    background:#fff;
+    display:block;
+    height:2px;
+    width:18px;
+    position:relative;
+    transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background:#fff;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:5px;  
+
+}
+
+.header .menu-icon .nav-icon:after{
+    background:#fff;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:-5px;  
+
+}
+
+.header .menu-btn{
+    display:none;
+}
+
+.header .menu-btn:checked ~ .menu{
+    max-height:360px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background:transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+}
+.button{
+        background-color: #008CBA; /* Green */
+        border: none;
+		border-radius: 10% / 50%;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+		margin-top: 10px;
+    }
+    .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+    }
+    
+    .button1:hover {
+        background-color: #008CBA;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+.normalinput{
+	height:30px;
+	border-style:none;
+	border-radius: 30px;
+	padding:5px;
+}
+.normalinput:focus {
+  background-color:#C0C0C0;
+    color: #FFFFFF;
+	transition: 0.5s;
+} 
+.heading-style{
+	background-color:red;
+	padding:10px;
+	font-size:15px;
+}
+.kitchen_menu a{
+	text-decoration: none;
+}
+.kitchen_menu li{
+	list-style-type: none;
+}
+.id_content {
+    /* 留出header及footer區塊的空間 */
+    padding-top: 70px;
+    padding-bottom: 90px;
+	z-index:0;
+	margin:0 auto;
+	width:80%;
+	background-color:#e2ece5;
+}
+.carousel-inner{
+	max-height: fit-content;
+	max-height:80%;
+
+}
+.carousel-caption{
+	margin-bottom:20%;
+}
+
+.banner{
+	padding:4%;
+	width :100%;
+	height:30%;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	border-radius:10px;
+	text-align: center;
+	color:#fff;
+	font-size:100;
+	text-shadow: 0 0 20px #fff;
+	
+}	
+.line{
+	border:0;
+	background-color:#fff;
+	height:3px;
+	width:50%;
+	border-bottom: 1px dashed #fff;
+}
+.News_Title{
+	text-align:center;
+	font-size:50;
+	color:#fff;
+}
+.DIV1{
+	width:50%;
+	height: 30%;
+	/* line-height:50px; */
+	padding:40px;
+	/* border:2px red solid; */
+	margin-right:6px;
+	float:left;
+	background-color: navajowhite;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+	
+
+.div_radius{
+border-radius: 25px;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+}
+
+.regbox {
+
+    background-color: #fff;
+    padding: 30px;
+	border-radius: 40px;
+    margin: 10px;
+	box-shadow: 5px 5px #ffe65e;
+}
+.DIV2{
+	width:45%;
+	background-color: navajowhite;
+	/* line-height:50px; */
+	padding:10px;
+	/* border:2px green solid; */
+	float:left;
+}
+.frame{
+	display:block;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;/*容許換行 width設45%*/
+}
+.box{
+	width:30%;
+	margin:10px;
+	background-color:#f6fdff;	
+	display:-webkit-box;
+	border-style:solid;
+	border-color:#BCD7A2;
+	border-radius:10px;
+}
+img{
+	border:2px;
+}
+.box>img{
+	width:100%;
+}
+.description{
+	width:100%;
+	margin-left:15%;
+	background-color:#f4efff;	
+}
+.id_footer {
+    /* 設定footer的高度 */
+    height: 40px;
+    box-sizing: border-box;
+    /* 設定footer絕對位置在底部 */
+    position: absolute;
+    bottom: 0;
+    /* 展開footer寬度 */
+	background-color:#ffebab;
+    width: 100%;
+	text-align:center;
+}
+
+#demo-table {                       
+    width: 12%;
+	border-spacing: initial;
+	margin: 20px 20px 20px 20px;
+	word-break: break-word;
+	table-layout: auto;
+	line-height: 1.8em;
+	color: #333;
+}
+ 
+ 
+#demo-table ul {
+    margin: 0;
+    padding: 0px;
+}
+ 
+#demo-table li {
+    cursor: pointer;
+    list-style-type: none;
+    display: inline-block;
+    color: #F0F0F0;
+    text-shadow: 0 0 1px #666666;
+    font-size: 20px;
+}
+ 
+#demo-table .highlight, #demo-table .selected {
+    color: #F4B30A;
+    text-shadow: 0 0 1px #F48F0A;
+}
+ 
+.star-rating-box {
+    border: #E4E4E4 1px solid;
+    margin: 2px 6px;
+    float: right;
+}
+ 
+.star-rating-count {
+    border-top: #E4E4E4 1px solid;
+    font-size: 0.8em;
+    padding: 2px 5px;
+    background: #f9f9f9;
+    color: #828181;
+}
+
+
+@media (max-width:1200px){
+	/*如果螢幕小於1200px ,套用這個區塊的設定
+	不須重複寫原本設定,寫要改的部分就好*/
+	.frame{
+		flex-wrap:wrap;
+	}
+	.box{
+		width:38%;
+		display:-webkit-box;
+	}
+	.banner{
+		padding:5%;
+		width :100%;
+		height:25%;
+		font-family:Arial;
+		text-align: center;
+		color:#fff;
+		font-size:30;
+	}	
+	
+}
+@media only screen and  (min-width:48em){
+
+    .header li{
+        float:left;
+    }
+    .header li a{
+        padding:20px 30px;
+		background-color:#5176b9;
+		color:#fff;
+    }
+    .header .menu{
+        clear:none;
+        float:right;
+        max-height:none;
+    }
+    .header .menu-icon{
+        display:none;
+    }
+	.box{
+		display:-webkit-box;
+	}
+
+
+}
+@media (max-width:500px){
+
+
+	/* .box{
+		width:90%;/*通常不會拉滿
+		display:block;
+	}
+
+	.description{
+		margin-left:0%;
+	} */
+	.id_content {
+    /* 留出header及footer區塊的空間 */
+		padding-top: 70px;
+		padding-bottom: 90px;
+		z-index:0;
+		margin:0 auto;
+		width:90%;
+	}
+	.banner{
+		padding:5%;
+		width :100%;
+		height:25%;
+		font-family:Arial;
+		text-align: center;
+		color:#fff;
+		font-size:30;
+	}	
+	.DIV1{
+		width:100%;
+		height: 35%;
+		/* line-height:50px; */
+		padding:20px;
+		/* border:2px red solid; */
+		background-color: aquamarine;
+		margin-right:6px;
+		float:left;
+		border-radius: 25px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		}
+	.DIV2{
+		width:95%;
+		/* line-height:50px; */
+		padding:20px;
+		background-color: aquamarine;
+		/* border:2px green solid; */
+		float:left;
+		border-radius: 25px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+	}
+	.carousel-caption{
+		margin-bottom:1%;
+	}
+
+}

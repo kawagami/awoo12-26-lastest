@@ -1,0 +1,316 @@
+html, body {
+    /* 設定body高度為100% 拉到視窗可視的大小 */
+    height: 100%;
+	margin: 0px auto;
+	padding:0px;
+	font-family: Microsoft JhengHei;
+}
+
+.id_wrapper {
+    /* 設定高度最小為100%, 如果內容區塊很多, 可以長大 */
+    min-height: 100%;
+    /* 位置設為relative, 作為footer區塊位置的參考 */
+    position: relative;
+	background-color:rgb(255, 255, 234);
+}
+.header{
+	height: 60px;
+    background-color:#5176b9;
+    box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
+    position:fixed;
+    width:100%;
+    z-index:3;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    background-color:#fff;
+}
+
+.header ul a{
+    display:block;
+    padding:20px;
+    border-right:1px solid #aaa;
+    text-decoration:none;
+	color:#ababab; /*超連結字顏色*/
+}
+
+.header ul a:hover{
+    color: #F8DC3D;
+   transition: 0.25s;
+}
+
+.header .logo{
+    float:left;
+    display:block;
+    font-size:2em;
+    padding:10px 20px;
+}
+
+.header .menu{
+    clear:both;
+    max-height:0;
+    transition:max-height .2s ease-out;
+}
+
+.header .menu-icon{
+    padding: 28px 20px;
+    position:relative;
+    float:right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+    background:#fff;
+    display:block;
+    height:2px;
+    width:18px;
+    position:relative;
+    transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background:#fff;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:5px;  
+
+}
+
+.header .menu-icon .nav-icon:after{
+    background:#fff;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:-5px;  
+
+}
+
+.header .menu-btn{
+    display:none;
+}
+
+.header .menu-btn:checked ~ .menu{
+    max-height:360px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background:transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+}
+.login-content{
+	margin:0 auto;
+	border: 2px red solid;
+	height:50%;
+	width:60%;
+	
+}
+.id_content {
+    /* 留出header及footer區塊的空間 */
+    padding-top: 70px;
+    padding-bottom: 90px;
+	z-index:0;
+	margin:0 auto;
+	width:80%;
+	background-color:#e2ece5;
+}
+.carousel-inner{
+	max-height:80%;
+}
+.carousel-caption{
+	margin-bottom:20%;
+}
+
+
+
+.DIV1{
+	width:80%;
+	height: 40%;
+	/* line-height:50px; */
+	padding:20px;
+	margin-right:6px;
+	float:left;
+}
+
+
+.DIV2{
+	width:40%;
+	/* line-height:50px; */
+	padding:20px;
+	border:2px green solid;
+	float:left;
+}
+.newdiv{
+        width:100%;
+        height:50%;
+        /* line-height:50px; */
+        padding:20px;
+        margin-right:6px;
+        float:left;
+    }
+.newdiv1{
+        width:100%;
+        height:auto;
+        /* line-height:50px; */
+        padding:20px;
+        margin-right:6px;
+        float:left;
+    }
+.button{
+        background-color: #008CBA; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+    }
+    
+    .button1:hover {
+        background-color: #008CBA;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+.regbox{
+	width:100%;
+}    
+    
+.frame{
+	display:block;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;/*容許換行 width設45%*/
+}
+.box{
+	width:30%;
+	margin:10px;
+	background-color:#f6fdff;	
+	display:-webkit-box;
+	border-style:solid;
+	border-color:#BCD7A2;
+	border-radius:10px;
+}
+img{
+	border:2px;
+}
+.box>img{
+	width:100%;
+}
+.description{
+	width:100%;
+	margin-left:15%;
+	background-color:#f4efff;	
+}
+.id_footer {
+    /* 設定footer的高度 */
+    height: 40px;
+    box-sizing: border-box;
+    /* 設定footer絕對位置在底部 */
+    position: absolute;
+    bottom: 0;
+    /* 展開footer寬度 */
+	background-color:#ffebab;
+    width: 100%;
+	text-align:center;
+
+}
+@media (max-width:1200px){
+	/*如果螢幕小於1200px ,套用這個區塊的設定
+	不須重複寫原本設定,寫要改的部分就好*/
+	.frame{
+		flex-wrap:wrap;
+	}
+	.box{
+		width:38%;
+		display:-webkit-box;
+	}
+	
+}
+@media only screen and  (min-width:48em){
+
+    .header li{
+        float:left;
+    }
+    .header li a{
+        padding:20px 30px;
+		background-color:#5176b9;
+		color:#fff;
+    }
+    .header .menu{
+        clear:none;
+        float:right;
+        max-height:none;
+    }
+    .header .menu-icon{
+        display:none;
+    }
+	.box{
+		display:-webkit-box;
+	}
+
+
+}
+@media (max-width:500px){
+
+
+	/* .box{
+		width:90%;/*通常不會拉滿
+		display:block;
+	}
+
+	.description{
+		margin-left:0%;
+	} */
+	.id_content {
+    /* 留出header及footer區塊的空間 */
+		padding-top: 60px;
+		padding-bottom: 80px;
+		z-index:0;
+		margin:0 auto;
+		width:90%;
+	}
+
+	.DIV1{
+		width:100%;
+		height: 35%;
+		/* line-height:50px; */
+		padding:20px;
+		border:2px red solid;
+		margin-right:6px;
+		float:left;
+		}
+	.DIV2{
+		width:40%;
+		/* line-height:50px; */
+		padding:20px;
+		border:2px green solid;
+		float:left;
+	}
+	.carousel-caption{
+		margin-bottom:1%;
+	}
+
+}
